@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CryptoModule } from './crypto/crypto.module';
 import { CryptoRoutingModule } from './crypto/crypto-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CryptoRoutingModule } from './crypto/crypto-routing.module';
     BrowserModule,
     AppRoutingModule,
     CryptoModule,
-    CryptoRoutingModule
+    CryptoRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
