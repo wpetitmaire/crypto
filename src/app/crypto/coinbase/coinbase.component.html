@@ -1,5 +1,5 @@
 <mat-table [dataSource]="accounts" class="mat-elevation-z8" >
-  <ng-container matColumnDef="code">
+  <ng-container matColumnDef="crypto">
     <mat-header-cell *matHeaderCellDef>Crypto</mat-header-cell>
     <mat-cell *matCellDef="let account">
       <div>
@@ -9,15 +9,16 @@
     </mat-cell>
   </ng-container>
 
-  <ng-container matColumnDef="libel">
-    <mat-header-cell *matHeaderCellDef>Balance</mat-header-cell>
-    <mat-cell *matCellDef="let account">{{ account.balance | cryptoBalanceFormat }}</mat-cell>
-  </ng-container>
-
   <ng-container matColumnDef="price">
     <mat-header-cell *matHeaderCellDef>Price</mat-header-cell>
     <mat-cell *matCellDef="let account">{{ account.price | currency:'EUR':'symbol':'1.2-2':'fr' }}</mat-cell>
   </ng-container>
+
+  <ng-container matColumnDef="holdings">
+    <mat-header-cell *matHeaderCellDef>Holdings</mat-header-cell>
+    <mat-cell *matCellDef="let account">{{ account.balance | cryptoBalanceFormat }}</mat-cell>
+  </ng-container>
+
 
   <mat-header-row *matHeaderRowDef="displayedColumns" ></mat-header-row>
   <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>

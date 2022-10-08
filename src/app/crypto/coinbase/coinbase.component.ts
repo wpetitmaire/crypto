@@ -9,7 +9,7 @@ import { CoinbaseAccount } from './model/coinbase.account';
 })
 export class CoinbaseComponent implements OnInit {
 
-  displayedColumns = ['code', 'libel', 'price']
+  displayedColumns = ['crypto', 'price', 'holdings']
   accounts!: CoinbaseAccount[];
 
   constructor(private readonly coinbaseService: CoinbaseService) {}

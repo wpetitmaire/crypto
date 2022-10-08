@@ -11,6 +11,6 @@ export class CoinbaseService {
   constructor(private http: HttpClient) { }
 
   getAccounts(): Observable<CoinbaseApi.accounts> {
-    return this.http.get<CoinbaseApi.accounts>('http://localhost:8081/api/accounts?refresh=true');
+    return this.http.get<CoinbaseApi.accounts>('http://localhost:8081/api/accounts');
   }
 }
