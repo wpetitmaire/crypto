@@ -1,12 +1,17 @@
 <mat-table [dataSource]="accounts" class="mat-elevation-z8" >
   <ng-container matColumnDef="code">
-    <mat-header-cell *matHeaderCellDef>Code</mat-header-cell>
-    <mat-cell *matCellDef="let account">{{ account.code }}</mat-cell>
+    <mat-header-cell *matHeaderCellDef>Crypto</mat-header-cell>
+    <mat-cell *matCellDef="let account">
+      <div>
+        <div>{{ account.code }}</div>
+        <div class="crypto-label">{{ account.libel }}</div>
+      </div>
+    </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="libel">
-    <mat-header-cell *matHeaderCellDef>Libellé</mat-header-cell>
-    <mat-cell *matCellDef="let account">{{ account.libel }}</mat-cell>
+    <mat-header-cell *matHeaderCellDef>Balance</mat-header-cell>
+    <mat-cell *matCellDef="let account">{{ account.balance }}</mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns" ></mat-header-row>
