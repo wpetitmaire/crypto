@@ -11,7 +11,7 @@
 
   <ng-container matColumnDef="libel">
     <mat-header-cell *matHeaderCellDef>Balance</mat-header-cell>
-    <mat-cell *matCellDef="let account">{{ account.balance }}</mat-cell>
+    <mat-cell *matCellDef="let account">{{ account.balance | cryptoBalanceFormat }}</mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns" ></mat-header-row>

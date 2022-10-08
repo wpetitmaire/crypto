@@ -2,23 +2,30 @@ export class CoinbaseAccount {
   id: string;
   code: string;
   libel: string;
-  balance: number;
+  balance: CoinbaseBalance;
   price: number;
-  exponent: number;
 
   constructor(
     id: string,
     code: string,
     libel: string,
-    balance: number,
     price: number,
-    exponent: number
+    balance: CoinbaseBalance,
   ) {
     this.id = id;
     this.code = code;
     this.libel = libel;
-    this.balance = balance;
     this.price = price;
-    this.exponent = exponent;
+    this.balance = new CoinbaseBalance(balance.value, balance.exponent);
+  }
+}
+
+export class CoinbaseBalance {
+  value: number;
+  exponent: number;
+
+  constructor(value: number, exponent: number) {
+    this.value = value;
+    this.exponent = value;
   }
 }
